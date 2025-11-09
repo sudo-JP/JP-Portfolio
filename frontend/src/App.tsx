@@ -1,47 +1,35 @@
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import Home from './components/Home/Home';
-import HeaderTag from './components/HeaderTag/HeaderTag';
-import CV from './components/CV/CV';
-import Projects from './components/Projects/Projects';
-import AboutMe from './components/AboutMe/AboutMe';
-import GymDay from './components/GymSchedule/GymDay';
-import workouts from './components/GymSchedule/Workout';
-
-interface Workout {
-  day: string, 
-  wo_style: string 
-  detailed_wo: string[]
-}
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
-  
+  const [count, setCount] = useState(0)
+
   return (
-  <div>
-    <NavBar />
-    <Home />
-    <HeaderTag tag={'About Me'}/>
-    <AboutMe />
-
-
-    <HeaderTag tag={'Projects'}/>
-    <Projects />
-
-    <HeaderTag tag={'CV'}/>
-    <CV />
-
-    <HeaderTag tag={'Gym Schedule'}/>
-    <div className="gym">
-      {workouts.map((workout: Workout)=>{
-        return (<div>
-          <GymDay day={workout.day} wo_style={workout.wo_style} detailed_wo={workout.detailed_wo} />
-        </div>);
-      })}
-
-    </div>
-
-  </div>
-  );
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default App;
+export default App
