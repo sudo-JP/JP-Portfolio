@@ -4,6 +4,7 @@
 import './index.css';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero'; 
+import AboutMe from './components/AboutMe/AboutMe';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div className="bg-[#fffaf3] min-h-screen text-[#575279]">
       <Header />
       <Hero />
+      <AboutMe />
       <main>
         {/* other sections */}
       </main>
