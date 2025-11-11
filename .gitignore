@@ -25,3 +25,4 @@ dist-ssr
 frontendv1/
 venv/
 db.json
+__pycache__
