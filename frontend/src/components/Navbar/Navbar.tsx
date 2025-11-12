@@ -6,7 +6,7 @@ import { useState } from "react";
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 function Navbar() {
-  const navLinks = ["ABOUT ME", "SKILLS", "EXPERIENCES", "PROJECTS", "FITNESS"];
+  const navLinks = ["ABOUT ME", "EXPERIENCES", "PROJECTS", "FITNESS"];
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");

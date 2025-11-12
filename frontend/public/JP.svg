@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 495" xmlns:bx="https://boxy-svg.com">
+  <text style="fill: rgb(51, 51, 51); font-family: &quot;JetBrains Mono&quot;; font-size: 420px; white-space: pre;" transform="matrix(0.994971, 0, 0, 0.964426, 0.979057, 53.622082)" x="-0.984" y="372.8">JP</text>
+  <rect width="492.28" height="500" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); paint-order: stroke; fill-opacity: 0; vector-effect: non-scaling-stroke; stroke-width: 10px;" rx="20" ry="20"/>
+  <defs>
+    <style bx:fonts="JetBrains Mono">@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono%3Aital%2Cwght%400%2C100..800%3B1%2C100..800&amp;display=swap);</style>
+  </defs>
+</svg>
