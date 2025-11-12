@@ -1,7 +1,7 @@
 import '../../index.css'
 // AboutMe.jsx
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import allmysocial from '../../assets/allmysocialmediaaccountsafteronegoodpicture.jpg'; 
+import beige from '../../assets/beige.jpg'; 
 import text from './AboutMeText'
 
 function AboutMe() {
@@ -18,7 +18,7 @@ function AboutMe() {
         {/* Image container */}
         <div className="flex justify-center md:justify-end w-full md:w-auto md:self-center -mt-20">
           <img
-            src={allmysocial}
+            src={beige}
             alt="Jason Phan"
             className="w-72 md:w-80 h-auto rounded-lg shadow-lg object-cover"
           />
