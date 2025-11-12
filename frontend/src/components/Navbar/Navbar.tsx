@@ -12,6 +12,7 @@ function Navbar() {
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
+  <section className="fixed top-0 left-0 w-full z-50 bg-[#1f1c33] 90 backdrop-blur-md shadow-md">
     <div className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
       
       {/* Left: Name + Nav Links */}
@@ -20,7 +21,6 @@ function Navbar() {
 
       <div className="relative group cursor-pointer">
         {/* Hover box: right to left */}
-        <span className="absolute inset-0 w-0 right-0 group-hover:left-0 group-hover:w-full transition-all duration-300 ease-in-out bg-[#31748f]"></span>
         
         {/* Text */}
         <span className="relative z-10 text-2xl font-bold text-[#f5f5f5] px-[2px] py-[2px]">
@@ -66,6 +66,7 @@ function Navbar() {
       </div>
 
     </div>
+  </section>
   );
 }
 
