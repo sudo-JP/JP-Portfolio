@@ -5,6 +5,7 @@ import './index.css';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero'; 
 import AboutMe from './components/AboutMe/AboutMe';
+import Experiences from './components/Experiences/Experiences'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Hero />
       <AboutMe />
+      <Experiences />
       <main>
         {/* other sections */}
       </main>
