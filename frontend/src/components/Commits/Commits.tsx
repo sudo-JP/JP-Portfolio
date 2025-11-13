@@ -40,19 +40,17 @@ function Commits() {
     );
 
 
-useEffect(() => {
-  const load = async () => {
-    const data = await fetchContributions();
-    console.log('[DEBUG] loaded contributions', data);
-    setContributions(data);
-  };
+    useEffect(() => {
+    const load = async () => {
+        const data = await fetchContributions();
+        setContributions(data);
+    };
 
-  load(); // immediate fetch
-  const interval = setInterval(load, 100000);
-  return () => clearInterval(interval);
-}, []);
+    load(); // immediate fetch
+    const interval = setInterval(load, 100000);
+    return () => clearInterval(interval);
+    }, []);
 
-    console.log('Current contributions state:', contributions);
 
     const totalCommits = contributions.reduce(
         (acc, c) => acc + c.contributionCount,
@@ -60,8 +58,8 @@ useEffect(() => {
     );
 
     return (
-        <div className="flex flex-row items-center gap-2">
-        <span className="text-lg font-semibold">This Week</span>
+        <div className="flex text-[#232136] flex-row items-center gap-6">
+        <span className="text-xl md:text-2xl font-semibold leading-relaxed">This Week</span>
 
         <div className="flex justify-center gap-2">
             {contributions.map((contrib, idx) => (
@@ -69,7 +67,7 @@ useEffect(() => {
             ))}
         </div>
 
-        <span className="text-sm font-medium">Total Commits: {totalCommits}</span>
+        <span className="text-xl md:text-2xl font-semibold leading-relaxed">Total Commits: {totalCommits}</span>
         </div>
     );
 }
