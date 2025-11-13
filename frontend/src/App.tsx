@@ -5,10 +5,12 @@ import './index.css';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero'; 
 import AboutMe from './components/AboutMe/AboutMe';
-import Experiences from './components/Experiences/Experiences'
+import Experiences from './components/Experiences/Experiences';
+import Projects from './components/Projects/Projects';
 
 
 function App() {
+console.log('[DEBUG] Rendering App');
   return (
 
     <div className="bg-[#fffaf3] min-h-screen text-[#575279]">
@@ -16,6 +18,8 @@ function App() {
       <Hero />
       <AboutMe />
       <Experiences />
+      <Projects />
+
       <main>
         {/* other sections */}
       </main>
