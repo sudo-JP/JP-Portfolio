@@ -20,7 +20,7 @@ function Hero() {
 
   return (
 
-    <section className="relative min-h-screen flex justify-center items-center bg-[#faf4ed]">
+    <section id="jp" className="relative min-h-screen flex justify-center items-center bg-[#faf4ed]">
       {/* Main Portrait */}
       <div className="flex flex-col items-center mt-20 md:mt-32 lg:mt-22 px-4 md:px-8 lg:px-16">
         <img

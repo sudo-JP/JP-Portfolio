@@ -23,7 +23,7 @@ const experiences: Experience[] = [
 ];
 function Experiences() {
   return (
-    <section className="bg-[#f2e9e1] py-12 px-4 md:px-16 flex flex-col items-center">
+    <section id="experiences" className="bg-[#f2e9e1] py-12 px-4 md:px-16 flex flex-col items-center">
       {/* Header */}
       <h2 className="mt-3 text-[2rem] md:text-[4rem] font-bold text-center mb-8">
         Experiences

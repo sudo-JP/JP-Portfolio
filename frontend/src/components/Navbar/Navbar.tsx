@@ -21,7 +21,15 @@ function Navbar() {
         
         {/* Text */}
         <span className="relative z-10 text-2xl font-bold text-[#f5f5f5] px-[2px] py-[2px]">
+
+          <Link
+            to="jp" // e.g., "ABOUT ME" -> "about-me"
+            smooth={true}
+            duration={500}
+            offset={-80} // adjust for fixed header height
+          >
           JP
+          </Link>
           </span>
         </div>
 
@@ -48,10 +56,12 @@ function Navbar() {
       </div>
       {/* Right: Theme toggle icons */}
       <div className="flex gap-5">
-        <FaGithub 
+        <a 
         href="https://github.com/sudo-JP"
-        target="_blank"
-        size={25} className="text-white hover:text-[#9ccfd8] cursor-pointer" />
+        target="_blank">
+        <FaGithub 
+        size={25} className="text-white hover:text-[#cecacd] cursor-pointer" />
+        </a>
         <Commits />
       </div>
 
