@@ -1,5 +1,5 @@
 import '../../index.css'
-import Commits from '../Commits/Commits'; 
+import Commits from '../Commits/Commits.tsx'; 
 
 function Projects() {
     return (

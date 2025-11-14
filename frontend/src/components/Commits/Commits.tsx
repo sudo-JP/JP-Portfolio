@@ -1,6 +1,6 @@
 import '../../index.css';
-import type { Contribution } from './CommitTile';
-import CommitTile from './CommitTile';
+import type { Contribution } from './CommitTile.tsx';
+import CommitTile from './CommitTile.tsx';
 import { useState, useEffect } from 'react';
 
 
@@ -52,14 +52,8 @@ function Commits() {
     }, []);
 
 
-    const totalCommits = contributions.reduce(
-        (acc, c) => acc + c.contributionCount,
-        0
-    );
-
     return (
         <div className="flex text-[#232136] flex-row items-center gap-6">
-        <span className="text-xl md:text-2xl font-semibold leading-relaxed">This Week</span>
 
         <div className="flex justify-center gap-2">
             {contributions.map((contrib, idx) => (
@@ -67,7 +61,6 @@ function Commits() {
             ))}
         </div>
 
-        <span className="text-xl md:text-2xl font-semibold leading-relaxed">Total Commits: {totalCommits}</span>
         </div>
     );
 }

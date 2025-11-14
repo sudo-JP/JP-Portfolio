@@ -1,15 +1,12 @@
 import '../../index.css'
 import { Link } from 'react-scroll'; 
+import Commits from '../Commits/Commits.tsx';
+import { FaGithub } from "react-icons/fa";
 
 
-import { useState } from "react";
-import { FaSun, FaMoon } from 'react-icons/fa';
 
 function Navbar() {
   const navLinks = ["ABOUT ME", "EXPERIENCES", "PROJECTS", "FITNESS"];
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
-  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
   <section className="fixed top-0 left-0 w-full z-50 bg-[#1f1c33] 90 backdrop-blur-md shadow-md">
@@ -50,19 +47,12 @@ function Navbar() {
       </ul>
       </div>
       {/* Right: Theme toggle icons */}
-
-      <div className="flex items-center space-x-4">
-        {theme === "light" ? (
-          <FaMoon
-            className="text-[#f5f5f5] text-xl cursor-pointer hover:text-[#908caa]"
-            onClick={toggleTheme}
-          />
-        ) : (
-          <FaSun
-            className="text-[#f5f5f5] text-xl cursor-pointer hover:text-[#f6c177]"
-            onClick={toggleTheme}
-          />
-        )}
+      <div className="flex gap-5">
+        <FaGithub 
+        href="https://github.com/sudo-JP"
+        target="_blank"
+        size={25} className="text-white hover:text-[#9ccfd8] cursor-pointer" />
+        <Commits />
       </div>
 
     </div>

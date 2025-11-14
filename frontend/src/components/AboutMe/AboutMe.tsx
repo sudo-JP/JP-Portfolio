@@ -2,7 +2,7 @@ import '../../index.css'
 // AboutMe.jsx
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import beige from '../../assets/beige.jpg'; 
-import text from './AboutMeText'
+import text from './AboutMeText.ts';
 
 function AboutMe() {
 
