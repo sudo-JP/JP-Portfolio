@@ -34,7 +34,7 @@ function Experiences() {
         {experiences.map((exp, idx) => (
           <div
             key={idx}
-            className="bg-[#9893a5] rounded-lg shadow-md p-6 flex-1 min-w-[400px] min-h-[100px] max-w-sm"
+            className="bg-[#9893a5] rounded-lg shadow-md p-6 flex-1 min-w-[400px] min-h-[100px] max-w-sm hover:shadow-lg hover:-translate-y-1"
           >
           <div className="flex space-y-10 flex-col">
             <div>
