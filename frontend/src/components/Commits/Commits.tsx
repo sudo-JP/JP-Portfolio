@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 async function fetchContributions(): Promise<Contribution[]> {
   try {
-    const response = await fetch('http://127.0.0.1:5000/contributions');
+    const response = await fetch('http://10.0.0.89:5050/contributions');
     if (!response.ok) throw new Error('Fetch failed with status ' + response.status);
     const data = await response.json();
 
