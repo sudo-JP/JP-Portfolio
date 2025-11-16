@@ -10,6 +10,15 @@ const ProjectList: ProjectCardProps[] = [
     tech: ["C++", "Rust", "Python", "PostgreSQL", "TCP"]
   },
   {
+    title: "Arch Linux Hyprland",
+    duration: "Apr 2025 - Aug 2025", 
+    status: "Finished",
+    description: "My Arch Linux Hyprland setup with Python scripts for a dynamic weather bar using OpenWeatherMap and IP APIs, light/dark mode via symbolic links, and custom Neovim configuration.",
+    github: "https://github.com/sudo-jp/stock-trading-trade",
+    more: "https://www.reddit.com/r/hyprland/comments/1ni3pl0/started_using_arch_beginning_of_this_summer/",
+    tech: ["Bash", "CSS", "Python", "Lua"]
+  },
+  {
     title: "Custom MySH Shell",
     duration: "Jan 2025 - Apr 2025", 
     status: "Finished", 
