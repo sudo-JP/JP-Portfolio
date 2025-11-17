@@ -7,6 +7,7 @@ import Hero from './components/Hero/Hero.tsx';
 import AboutMe from './components/AboutMe/AboutMe.tsx';
 import Experiences from './components/Experiences/Experiences.tsx';
 import Projects from './components/Projects/Projects.tsx';
+import Fitness from './components/Fitness/Fitness.tsx';
 
 
 function App() {
@@ -19,7 +20,7 @@ console.log('[DEBUG] Rendering App');
       <AboutMe />
       <Experiences />
       <Projects />
-
+      <Fitness />
       <main>
         {/* other sections */}
       </main>
