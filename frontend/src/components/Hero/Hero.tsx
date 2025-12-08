@@ -55,9 +55,6 @@ function Hero() {
               className="w-full h-full object-cover rounded-lg shadow-lg"
             />
 
-            <p className="absolute bottom-[-2rem] left-0 w-full text-sm md:text-base text-gray-700 font-medium text-center">
-              Fun Fact: I got 750+ upvotes on Reddit and 25+ stars on GitHub 
-            </p>
           </div>
 
           {/* Floating Image 2 (Robotics) */}

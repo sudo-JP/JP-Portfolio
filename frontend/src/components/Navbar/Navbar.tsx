@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 
 
 function Navbar() {
-  const navLinks = ["ABOUT ME", "EXPERIENCES", "PROJECTS", "FITNESS"];
+  const navLinks = ["ABOUT ME", "EXPERIENCES", "PROJECTS"];
 
   return (
   <section className="fixed top-0 left-0 w-full z-50 bg-[#1f1c33] 90 backdrop-blur-md shadow-md">
