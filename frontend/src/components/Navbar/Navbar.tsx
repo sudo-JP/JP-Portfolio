@@ -59,7 +59,7 @@ function Navbar() {
             onClick={toggleTheme}
             aria-label={`Switch to ${nextThemeName}`}
             title={`Switch to ${nextThemeName}`}
-            className="grid size-10 place-items-center border border-line text-muted transition-colors hover:border-pine hover:text-pine"
+            className="grid size-10 place-items-center border border-line text-muted transition-colors hover:border-pine hover:text-pine cursor-pointer"
           >
             {isDark ? (
               <FaSun aria-hidden="true" size={16} />
