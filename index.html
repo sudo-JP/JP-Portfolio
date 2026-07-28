@@ -4,9 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/JP-Portfolio/crescent-moon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const storageKey = 'portfolio-theme';
+        let storedTheme = null;
+
+        try {
+          storedTheme = window.localStorage.getItem(storageKey);
+        } catch (error) {
+          console.warn('Could not read the theme preference.', error);
+        }
+
+        const followsDarkSystemTheme = window.matchMedia(
+          '(prefers-color-scheme: dark)',
+        ).matches;
+        const theme =
+          storedTheme === 'rose-pine' || storedTheme === 'rose-pine-dawn'
+            ? storedTheme
+            : followsDarkSystemTheme
+              ? 'rose-pine'
+              : 'rose-pine-dawn';
+
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme =
+          theme === 'rose-pine' ? 'dark' : 'light';
+      })();
+    </script>
     <title>Jason Phan</title>
-    <script type="module" crossorigin src="/JP-Portfolio/assets/index-CHhhwC_r.js"></script>
-    <link rel="stylesheet" crossorigin href="/JP-Portfolio/assets/index-Om0H5ANC.css">
+    <script type="module" crossorigin src="/JP-Portfolio/assets/index-DjiEn_3t.js"></script>
+    <link rel="stylesheet" crossorigin href="/JP-Portfolio/assets/index-CbnFWLX6.css">
   </head>
   <body>
     <div id="root"></div>
