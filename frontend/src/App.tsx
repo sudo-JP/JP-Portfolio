@@ -1,6 +1,3 @@
-//import { useState } from 'react';
-//import reactLogo from './assets/react.svg';
-//import viteLogo from '/vite.svg';
 import './index.css';
 import Navbar from './components/Navbar/Navbar.tsx';
 import Hero from './components/Hero/Hero.tsx'; 
@@ -10,21 +7,17 @@ import Projects from './components/Projects/Projects.tsx';
 
 
 function App() {
-console.log('[DEBUG] Rendering App');
   return (
-
-    <div className="bg-[#fffaf3] min-h-screen text-[#575279]">
+    <div className="min-h-screen overflow-x-clip bg-cream text-ink">
       <Navbar />
-      <Hero />
-      <AboutMe />
-      <Experiences />
-      <Projects />
       <main>
-        {/* other sections */}
+        <Hero />
+        <AboutMe />
+        <Experiences />
+        <Projects />
       </main>
     </div>
   );
 }
 
 export default App;
-

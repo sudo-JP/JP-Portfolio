@@ -1,63 +1,82 @@
-import '../../index.css'
+import '../../index.css';
 
 type Experience = {
-  title: string;
   company: string;
-  date: string;
-  skills: string[];
+  role: string;
+  period: string;
+  note: string;
 };
 
 const experiences: Experience[] = [
   {
-    title: "Software Engineer Edge Computing",
-    company: "Dynamo Mobility",
-    date: "Apr 2025 - Aug 2025",
-    skills: ["Python", "SQL", "SQLite3", "SUMO", "Ubuntu", "NVIDIA Jetson"],
+    company: 'ModiFace',
+    role: 'Graphics SDK Intern',
+    period: '2026 - now',
+    note: 'I move between rendering and SDK work: shader experiments, skin rendering fixes, iOS integration, camera lifecycle work, and Android stability. I\'m still early in the internship, which is part of what makes it interesting.',
   },
   {
-    title: "Backend AI Engineer",
-    company: "Markitech",
-    date: "Apr 2025 - Aug 2025",
-    skills: ["Node.js", "Express.js", "Socket.io", "MongoDB", "Docker", "Jest", "Postman"],
+    company: 'Dynamo Mobility',
+    role: 'Software Engineer, Edge Computing',
+    period: 'May - Aug 2025',
+    note: 'I worked around traffic simulation, road-direction data, and Jetson deployment. It was a useful first look at software leaving the laptop and meeting the physical world.',
+  },
+  {
+    company: 'Cliniscript',
+    role: 'Backend Engineer',
+    period: 'May - Aug 2025',
+    note: 'I built and tested webhook-driven Node services with MongoDB and Docker, and came away with much stronger opinions about useful logs and reliable integration tests.',
   },
 ];
+
 function Experiences() {
   return (
-    <section id="experiences" className="bg-[#f2e9e1] py-12 px-4 md:px-16 flex flex-col items-center">
-      {/* Header */}
-      <h2 className="mt-3 text-[2rem] md:text-[4rem] font-bold text-center mb-8">
-        Experiences
-      </h2>
-
-      {/* Cards container */}
-      <div className="flex flex-wrap justify-center gap-6 w-full max-w-5xl">
-        {experiences.map((exp, idx) => (
-          <div
-            key={idx}
-            className="bg-[#9893a5] rounded-lg shadow-md p-6 flex-1 min-w-[400px] min-h-[100px] max-w-sm hover:shadow-lg hover:-translate-y-1"
-          >
-          <div className="flex space-y-10 flex-col">
-            <div>
-            <h1 className="text-xl md:text-xl font-bold text-[#f2e9e1]">
-              {exp.title}
-            </h1>
-            <p className="text-[#f4ede8] font-semibold text-lg md:text-lg">
-              {exp.company} • {exp.date}
+    <section id="experiences" className="scroll-mt-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="h-1.5 bg-gold" aria-hidden="true" />
+        <div className="grid gap-8 py-12 md:grid-cols-[13rem_1fr] md:gap-16 md:py-16">
+          <div>
+            <p className="mb-3 flex items-center gap-2 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-muted">
+              <span aria-hidden="true" className="size-1.5 bg-gold" />
+              02 / elsewhere
             </p>
-            </div>
-            <div className="flex flex-wrap gap-2 mt-3">
-              {exp.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="bg-teal-200 text-teal-800 text-xs md:text-sm px-2 py-1 rounded"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-            </div>
+            <h2 className="font-display text-3xl tracking-[-0.03em]">
+              some places i&apos;ve spent time
+            </h2>
+            <p className="mt-3 max-w-xs font-display text-sm leading-6 text-muted">
+              not the whole resume, just a couple chapters worth mentioning.
+            </p>
           </div>
-        ))}
+
+          <div>
+            {experiences.map((experience) => (
+              <article
+                key={`${experience.company}-${experience.role}`}
+                className="group relative border-t border-line py-6 transition-transform duration-200 hover:translate-x-1 first:border-ink"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-y-4 -left-3 w-0.5 origin-center scale-y-0 bg-gold transition-transform duration-200 group-hover:scale-y-100"
+                />
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                  <div>
+                    <h3 className="font-display text-xl">
+                      {experience.company}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted">
+                      {experience.role}
+                    </p>
+                  </div>
+                  <p className="shrink-0 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-muted">
+                    {experience.period}
+                  </p>
+                </div>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
+                  {experience.note}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

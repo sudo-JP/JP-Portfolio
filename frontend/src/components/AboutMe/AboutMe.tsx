@@ -1,64 +1,42 @@
-import '../../index.css'
-// AboutMe.jsx
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import beige from '../../assets/beige.jpg'; 
-import text from './AboutMeText.ts';
+import '../../index.css';
 
 function AboutMe() {
-
   return (
-    <section id="about-me" className="bg-[#ebbcba] py-12 px-4 md:px-16 flex flex-col items-center">
-      {/* Header */}
-      <h2 className="mt-3 text-[2rem] md:text-[4rem] font-bold text-center mb-8">
-        About Me
-      </h2>
+    <section id="about-me" className="scroll-mt-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="h-1.5 bg-pine" aria-hidden="true" />
+        <div className="grid gap-8 py-12 md:grid-cols-[13rem_1fr] md:gap-16 md:py-16">
+          <div>
+            <p className="mb-3 flex items-center gap-2 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-muted">
+              <span aria-hidden="true" className="size-1.5 bg-pine" />
+              01 / about
+            </p>
+            <h2 className="font-display text-3xl tracking-[-0.03em]">
+              a little context
+            </h2>
+            <p className="mt-3 max-w-xs font-display text-sm leading-6 text-muted">
+              the short version, because the long version is probably scattered
+              across my projects.
+            </p>
+          </div>
 
-      {/* Inner flex container: image + right-side vertical stack */}
-      <div className="flex flex-col md:flex-row items-start justify-center gap-20 w-full max-w-5xl">
-        {/* Image container */}
-        <div className="flex justify-center md:justify-end w-full md:w-auto md:self-center -mt-20">
-          <img
-            src={beige}
-            alt="Jason Phan"
-            className="w-72 md:w-80 h-auto rounded-lg shadow-lg object-cover"
-          />
-        </div>
-
-        {/* Right side: vertical stack */}
-        <div className="flex flex-col justify-center space-y-4 flex-1">
-          <p
-            className="text-xl md:text-2xl font-semibold leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-          <div className="flex justify-evenly gap-4 mt-4">
-            <a
-              href="https://github.com/sudo-JP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              <FaGithub size={40} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/phanductuan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#286983] hover:text-blue-800 transition-colors"
-            >
-              <FaLinkedin size={40} />
-            </a>
-            <a
-              href="mailto:jase.phan@mail.utoronto.ca"
-              className="text-[#575279] hover:text-[#797593] transition-colors"
-            >
-              <FaEnvelope size={40} />
-            </a>
+          <div className="max-w-3xl space-y-5 font-display text-lg leading-8 sm:text-xl sm:leading-9">
+            <p>
+              I&apos;m a CS specialist at the University of Toronto Mississauga, graduating in 2028
+              after taking the co-op route. Right now I&apos;m on a year-long internship at ModiFace, where I work
+              across rendering and mobile SDK problems.
+            </p>
+            <p>
+              I tend to learn by building things that force me down a layer: a ray tracer that grew a compiler and
+              embedded protocol, a tiny preemptive kernel, scheduling experiments, and the shell I still keep around.
+              The useful skill for me has been consistency—the same lesson as the gym: show up often enough and difficult
+              things stop feeling mysterious.
+            </p>
           </div>
         </div>
       </div>
     </section>
-
   );
-};
+}
 
 export default AboutMe;
