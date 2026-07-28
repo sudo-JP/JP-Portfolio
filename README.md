@@ -71,12 +71,16 @@ change the rendered project list:
   description: 'A short personal description.',
   github: 'https://github.com/username/repository',
   tech: ['TypeScript', 'React'],
+  context: 'school work',
   featured: true,
 },
 ```
 
 Keep `featured: true` on exactly three projects. Those appear immediately;
 projects without it appear in the expandable project drawer.
+
+`context` adds small optional context beside the project title (e.g., 'school work',
+'internship'). Omit it for no label.
 
 ### Editing Notes
 
@@ -160,3 +164,10 @@ Optionally add a navbar link to the `navLinks` array in
 - Edit `navLinks` in `Navbar.tsx` to change navigation labels or destinations.
 - Edit `socialLinks` and the introduction in `Hero.tsx` to update profile links
   and hero text.
+
+## Theme Attribution
+
+This site is themed with [Rosé Pine](https://rosepinetheme.com), a lovingly crafted color palette.
+
+- **Icon source**: [rosepinetheme.com/assets/icon.svg](https://raw.githubusercontent.com/rose-pine/rose-pine-theme/main/assets/icon.svg)
+- **License**: [MIT](https://github.com/rose-pine/rose-pine-theme/blob/main/LICENSE)

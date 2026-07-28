@@ -12,19 +12,13 @@ const experiences: Experience[] = [
     company: 'ModiFace',
     role: 'Graphics SDK Intern',
     period: '2026 - now',
-    note: 'I move between rendering and SDK work: shader experiments, skin rendering fixes, iOS integration, camera lifecycle work, and Android stability. I\'m still early in the internship, which is part of what makes it interesting.',
-  },
-  {
-    company: 'Dynamo Mobility',
-    role: 'Software Engineer, Edge Computing',
-    period: 'May - Aug 2025',
-    note: 'I worked around traffic simulation, road-direction data, and Jetson deployment. It was a useful first look at software leaving the laptop and meeting the physical world.',
+    note: 'I bounce between rendering and SDK work. So far that has meant shaders, skin rendering fixes, iOS integration, camera stuff, and the occasional Android crash.',
   },
   {
     company: 'Cliniscript',
     role: 'Backend Engineer',
     period: 'May - Aug 2025',
-    note: 'I built and tested webhook-driven Node services with MongoDB and Docker, and came away with much stronger opinions about useful logs and reliable integration tests.',
+    note: 'I worked on webhook-based Node services with MongoDB and Docker, doing backend integrations and tests.',
   },
 ];
 
@@ -42,9 +36,6 @@ function Experiences() {
             <h2 className="font-display text-3xl tracking-[-0.03em]">
               some places i&apos;ve spent time
             </h2>
-            <p className="mt-3 max-w-xs font-display text-sm leading-6 text-muted">
-              not the whole resume, just a couple chapters worth mentioning.
-            </p>
           </div>
 
           <div>

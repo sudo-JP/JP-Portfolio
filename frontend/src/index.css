@@ -9,14 +9,32 @@
   --color-pine: #31748f;
   --color-gold: #d9a441;
   --color-foam: #76aab5;
+  --color-love: #b4637a;
+  --color-on-gold: #403d52;
   --font-display: Georgia, "Times New Roman", serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+html[data-theme="rose-pine"] {
+  --color-cream: #191724;
+  --color-paper: #1f1d2e;
+  --color-ink: #e0def4;
+  --color-muted: #908caa;
+  --color-line: #393552;
+  --color-pine: #9ccfd8;
+  --color-gold: #f6c177;
+  --color-foam: #9ccfd8;
+  --color-love: #eb6f92;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
     background: var(--color-cream);
+    transition:
+      background-color 180ms ease,
+      color 180ms ease;
   }
 
   body {
@@ -26,6 +44,9 @@
     color: var(--color-ink);
     font-family: Arial, Helvetica, sans-serif;
     text-rendering: optimizeLegibility;
+    transition:
+      background-color 180ms ease,
+      color 180ms ease;
   }
 
   a,
@@ -41,6 +62,22 @@
   ::selection {
     background: color-mix(in srgb, var(--color-foam) 45%, transparent);
   }
+}
+
+@keyframes theme-name-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theme-name-enter {
+  animation: theme-name-enter 180ms ease-out;
 }
 
 @media (prefers-reduced-motion: reduce) {

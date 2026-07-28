@@ -61,9 +61,7 @@ function Hero() {
               hey, i&apos;m jason.
             </h1>
             <p className="mt-2 max-w-2xl font-display text-sm leading-6 text-muted sm:text-base sm:leading-7">
-              CS student at UTM, currently interning at ModiFace, and a systems
-              tinkerer—usually somewhere between compilers, low-level Rust, and
-              whatever rabbit hole came up this week.
+              CS student at UTM, currently interning at ModiFace. I mostly spend my free time messing with systems programming and whatever else looks interesting that week.
             </p>
           </div>
 

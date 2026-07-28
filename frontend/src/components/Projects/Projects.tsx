@@ -23,16 +23,23 @@ function ProjectRow({ project, index }: ProjectRowProps) {
   );
 
   return (
-    <article className="group relative grid grid-cols-[2rem_1fr] gap-2 border-b border-line py-5 transition-transform duration-200 hover:translate-x-1 focus-within:translate-x-1 sm:grid-cols-[2.5rem_1fr_9rem] sm:gap-4">
+    <article className="group/row relative grid grid-cols-[2rem_1fr] gap-2 border-b border-line py-5 transition-transform duration-200 hover:translate-x-1 focus-within:translate-x-1 sm:grid-cols-[2.5rem_1fr_9rem] sm:gap-4">
       <span
         aria-hidden="true"
-        className="absolute inset-y-4 -left-3 w-0.5 origin-center scale-y-0 bg-foam transition-transform duration-200 group-hover:scale-y-100 group-focus-within:scale-y-100"
+        className="absolute inset-y-4 -left-3 w-0.5 origin-center scale-y-0 bg-foam transition-transform duration-200 group-hover/row:scale-y-100 group-focus-within/row:scale-y-100"
       />
       <span className="pt-1 font-mono text-[0.68rem] text-pine">
         {String(index + 1).padStart(2, '0')}
       </span>
       <div>
-        <h3 className="font-display text-lg sm:text-xl">{title}</h3>
+        <div className="flex flex-wrap items-center gap-2">
+          <h3 className="font-display text-lg sm:text-xl">{title}</h3>
+          {project.context && (
+            <span className="border border-line px-1.5 py-0.5 font-mono text-[0.58rem] uppercase tracking-[0.08em] text-muted">
+              {project.context}
+            </span>
+          )}
+        </div>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
           {project.description}
         </p>
@@ -62,9 +69,6 @@ function Projects() {
             <h2 className="font-display text-3xl tracking-[-0.03em]">
               things i&apos;ve been building
             </h2>
-            <p className="mt-3 max-w-xs font-display text-sm leading-6 text-muted">
-              some finished, some ongoing, all here because i got curious.
-            </p>
           </div>
 
           <div>
@@ -82,14 +86,14 @@ function Projects() {
               />
             ))}
 
-            <details className="group">
+            <details className="group/drawer">
               <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between border-b border-ink py-3 font-display text-sm text-pine [&::-webkit-details-marker]:hidden">
                 <span>the rest of the project drawer</span>
                 <span className="font-mono text-[0.65rem] uppercase tracking-[0.08em]">
-                  <span className="group-open:hidden">
+                  <span className="group-open/drawer:hidden">
                     {archivedProjects.length} projects +
                   </span>
-                  <span className="hidden group-open:inline">close -</span>
+                  <span className="hidden group-open/drawer:inline">close -</span>
                 </span>
               </summary>
               <div>
